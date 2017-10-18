@@ -6,6 +6,7 @@ target 'methodist' do
 
   # Pods for methodist
   pod 'IQKeyboardManagerSwift'
+  pod 'Alamofire'
 
   target 'methodistTests' do
     inherit! :search_paths

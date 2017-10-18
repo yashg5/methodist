@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, MXChatListModelDelegate {
 
     var message: String!
     
-    // Moxtra Initialize values
+    // Moxtra Initialize values with sandbox details
     var clientID = "oEgwC6qemCc"
     var clientSecret = "soXXY4cuu0M"
     var cusUniqueID: String!
@@ -23,6 +24,32 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.welcomeMsg.text = message
+        
+        // Autheticate user againt Moxtra to get access_token
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/x-www-form-urlencoded"
+        ]
+        
+        let parameters: Parameters = [
+            "client_id": self.clientID,
+            "client_secret": self.clientSecret,
+            "grant_type": "http://www.moxtra.com/auth_uniqueid",
+            "uniqueid": self.cusUniqueID,
+            "timestamp": String(Date().timeIntervalSince1970 * 1000),
+            "firstname": "yaswanth",
+            "lastname": "gosula"
+        ]
+
+        Alamofire.request("https://apisandbox.moxtra.com/oauth/token", method: .post, parameters: parameters, headers: headers).validate().responseJSON { response in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value {
+                        print("JSON: \(json)")
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+        }
     }
 
     override func didReceiveMemoryWarning() {
