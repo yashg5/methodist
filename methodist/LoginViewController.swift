@@ -53,7 +53,7 @@ class LoginViewController: UIViewController {
             let controller = navigationController.topViewController as! HomeViewController
             if let name = firstName.text {
                 controller.message = "Welcome \(name). How can we help you today?"
-                controller.cusUniqueID = name
+                controller.cusUniqueID = "zemoso1"
             }
         }
     }

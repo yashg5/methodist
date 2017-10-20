@@ -16,15 +16,20 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
     // Moxtra Initialize values with sandbox details
     var clientID = "oEgwC6qemCc"
     var clientSecret = "soXXY4cuu0M"
+    var binder_id = "Bsp6ybrHjxw8ec6fym9nsO9"
     var cusUniqueID: String!
+    var chatSessions:Array<MXChat>? = nil
+    var chatListModel: MXChatListModel?
     
     @IBOutlet weak var welcomeMsg: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.welcomeMsg.text = message
         
+        self.spinner.startAnimating()
         // Autheticate user againt Moxtra to get access_token
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded"
@@ -43,11 +48,25 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
         Alamofire.request("https://apisandbox.moxtra.com/oauth/token", method: .post, parameters: parameters, headers: headers).validate().responseJSON { response in
                 switch response.result {
                 case .success:
-                    if let json = response.result.value {
-                        print("JSON: \(json)")
+                    self.spinner.stopAnimating()
+                    if let json = response.result.value as? [String : AnyObject] {
+                        if let access_token = json["access_token"] as? String {
+                            print("*******access token*****")
+                            print(access_token)
+                            MXChatClient.sharedInstance().link(withAccessToken: access_token, baseDomain: "sandbox.moxtra.com", completionHandler: { (error) in
+                                if error != nil {
+                                    DispatchQueue.main.async {
+                                        self.simpleAlert(message: error!.localizedDescription)
+                                    }
+                                }
+                            })
+                        }
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    self.spinner.stopAnimating()
+                    DispatchQueue.main.async {
+                        self.simpleAlert(message: error.localizedDescription)
+                    }
                 }
         }
     }
@@ -58,6 +77,22 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
     }
     
     @IBAction func onChatWithNurse(_ sender: UIButton) {
+        self.spinner.startAnimating()
+        let chatModel = MXChatListModel.init()
+        chatModel.delegate = self
+        self.chatSessions = chatModel.chats()
+        self.getChatViewController(binderID: self.binder_id, success: { (chat, chatViewController) in
+            self.spinner.stopAnimating()
+            let vc = CustomChatViewController()
+            vc.chatView = chatViewController
+            vc.chat = chat
+            self.navigationController?.pushViewController(vc, animated: true)
+        }, failure: { (errorMessage) in
+            self.spinner.stopAnimating()
+            DispatchQueue.main.async {
+                self.simpleAlert(message: errorMessage)
+            }
+        })
     }
     
     @IBAction func onViewMyRecord(_ sender: UIButton) {
@@ -73,5 +108,35 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getChatViewController(binderID:String, scrollToFeed:Any?=nil, success:@escaping (MXChat ,UIViewController)->Void, failure:@escaping (String)->Void)->Void{
+        if self.chatSessions != nil {
+            let chatItem:MXChat? = self.chatSessions!.filter{$0.chatId==binderID}.first
+            if let chat = chatItem {
+                if chat.unreadFeedsCount != 0 {
+                    UIApplication.shared.applicationIconBadgeNumber = Int(chat.unreadFeedsCount)
+                }
+                let chatViewController = MXChatViewController.init(chat: chat)
+                if let scroll = scrollToFeed{
+                    chatViewController.scroll(toFeed: scroll)
+                }
+                success(chat ,chatViewController)
+            } else {
+                failure("chat not found in chatSessions array")
+            }
+        } else {
+            failure("No chats found: chatSessions array null")
+        }
+    }
 
+    // Simple alerts with message and ok action
+    func simpleAlert(message: String) {
+        let alert = UIAlertController(title: "ONCO-CHAT", message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        present(alert, animated: true, completion: nil)
+    }
 }

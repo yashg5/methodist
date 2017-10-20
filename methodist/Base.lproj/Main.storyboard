@@ -263,11 +263,17 @@
                                             <action selector="onViewMyRecord:" destination="n3I-RX-ls7" eventType="touchUpInside" id="Abv-z3-Fqj"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-LL-1BB">
+                                        <rect key="frame" x="169" y="102" width="37" height="37"/>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="5Hw-DI-XOQ" firstAttribute="centerX" secondItem="Iyr-Rs-Unv" secondAttribute="centerX" id="0aY-1t-liq"/>
+                                    <constraint firstItem="gI2-LL-1BB" firstAttribute="centerY" secondItem="Iyr-Rs-Unv" secondAttribute="centerY" id="6Q3-In-QYz"/>
                                     <constraint firstItem="dqx-V8-TnR" firstAttribute="top" secondItem="Iyr-Rs-Unv" secondAttribute="top" constant="30" id="9qn-UZ-K2K"/>
+                                    <constraint firstItem="gI2-LL-1BB" firstAttribute="centerX" secondItem="Iyr-Rs-Unv" secondAttribute="centerX" id="eRU-3e-AHa"/>
                                     <constraint firstItem="dqx-V8-TnR" firstAttribute="centerX" secondItem="Iyr-Rs-Unv" secondAttribute="centerX" id="kLy-2q-6Px"/>
                                     <constraint firstItem="5Hw-DI-XOQ" firstAttribute="top" secondItem="dqx-V8-TnR" secondAttribute="bottom" constant="40" id="zvx-yX-hG9"/>
                                 </constraints>
@@ -286,14 +292,48 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DqF-wY-kBw"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ONCO-CHAT" id="juR-Rf-vLA"/>
+                    <navigationItem key="navigationItem" title="ONCO-CHAT" id="juR-Rf-vLA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="cMD-5m-BIS"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="spinner" destination="gI2-LL-1BB" id="XOH-jD-26e"/>
                         <outlet property="welcomeMsg" destination="2pr-m2-bdW" id="ta4-bN-foR"/>
+                        <segue destination="D6v-w5-Oy8" kind="show" identifier="showChat" id="POF-gT-jEy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYs-5C-o9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1706.4000000000001" y="114.69265367316342"/>
+        </scene>
+        <!--Custom Chat View Controller-->
+        <scene sceneID="Bda-OA-gw3">
+            <objects>
+                <viewController id="D6v-w5-Oy8" customClass="CustomChatViewController" customModule="methodist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fib-UB-wJ8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YTt-4U-Uul">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YTt-4U-Uul" firstAttribute="top" secondItem="ePy-TE-i1G" secondAttribute="top" id="MTP-r8-2ve"/>
+                            <constraint firstItem="YTt-4U-Uul" firstAttribute="bottom" secondItem="ePy-TE-i1G" secondAttribute="bottom" id="SHk-WO-f1B"/>
+                            <constraint firstItem="YTt-4U-Uul" firstAttribute="trailing" secondItem="ePy-TE-i1G" secondAttribute="trailing" id="WRx-4y-g9H"/>
+                            <constraint firstItem="YTt-4U-Uul" firstAttribute="leading" secondItem="ePy-TE-i1G" secondAttribute="leading" id="v9c-6M-jTx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ePy-TE-i1G"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatContainerView" destination="YTt-4U-Uul" id="nBb-mL-ZsR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdG-mh-pys" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2484" y="113.79310344827587"/>
         </scene>
     </scenes>
 </document>
