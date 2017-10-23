@@ -28,7 +28,14 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
         super.viewDidLoad()
 
         self.welcomeMsg.text = message
-        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func onChatWithNurse(_ sender: UIButton) {
         self.spinner.startAnimating()
         // Autheticate user againt Moxtra to get access_token
         let headers: HTTPHeaders = [
@@ -44,55 +51,47 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
             "firstname": "yaswanth",
             "lastname": "gosula"
         ]
-
+        
         Alamofire.request("https://apisandbox.moxtra.com/oauth/token", method: .post, parameters: parameters, headers: headers).validate().responseJSON { response in
-                switch response.result {
-                case .success:
-                    self.spinner.stopAnimating()
-                    if let json = response.result.value as? [String : AnyObject] {
-                        if let access_token = json["access_token"] as? String {
-                            print("*******access token*****")
-                            print(access_token)
-                            MXChatClient.sharedInstance().link(withAccessToken: access_token, baseDomain: "sandbox.moxtra.com", completionHandler: { (error) in
-                                if error != nil {
-                                    DispatchQueue.main.async {
-                                        self.simpleAlert(message: error!.localizedDescription)
-                                    }
+            switch response.result {
+            case .success:
+                if let json = response.result.value as? [String : AnyObject] {
+                    if let access_token = json["access_token"] as? String {
+                        print("*******access token*****")
+                        print(access_token)
+                        MXChatClient.sharedInstance().link(withAccessToken: access_token, baseDomain: "sandbox.moxtra.com", completionHandler: { (error) in
+                            if error != nil {
+                                DispatchQueue.main.async {
+                                    self.simpleAlert(message: error!.localizedDescription)
                                 }
-                            })
-                        }
-                    }
-                case .failure(let error):
-                    self.spinner.stopAnimating()
-                    DispatchQueue.main.async {
-                        self.simpleAlert(message: error.localizedDescription)
+                            } else {
+                                let chatModel = MXChatListModel.init()
+                                chatModel.delegate = self
+                                self.chatSessions = chatModel.chats()
+                                self.getChatViewController(binderID: self.binder_id, success: { (chat, chatViewController) in
+                                    self.spinner.stopAnimating()
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let vc = storyboard.instantiateViewController(withIdentifier: "chatVC") as! CustomChatViewController
+                                    vc.chatView = chatViewController
+                                    vc.chat = chat
+                                    self.navigationController?.pushViewController(vc, animated: true)
+                                }, failure: { (errorMessage) in
+                                    self.spinner.stopAnimating()
+                                    DispatchQueue.main.async {
+                                        self.simpleAlert(message: errorMessage)
+                                    }
+                                })
+                            }
+                        })
                     }
                 }
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func onChatWithNurse(_ sender: UIButton) {
-        self.spinner.startAnimating()
-        let chatModel = MXChatListModel.init()
-        chatModel.delegate = self
-        self.chatSessions = chatModel.chats()
-        self.getChatViewController(binderID: self.binder_id, success: { (chat, chatViewController) in
-            self.spinner.stopAnimating()
-            let vc = CustomChatViewController()
-            vc.chatView = chatViewController
-            vc.chat = chat
-            self.navigationController?.pushViewController(vc, animated: true)
-        }, failure: { (errorMessage) in
-            self.spinner.stopAnimating()
-            DispatchQueue.main.async {
-                self.simpleAlert(message: errorMessage)
+            case .failure(let error):
+                self.spinner.stopAnimating()
+                DispatchQueue.main.async {
+                    self.simpleAlert(message: error.localizedDescription)
+                }
             }
-        })
+        }
     }
     
     @IBAction func onViewMyRecord(_ sender: UIButton) {
@@ -140,3 +139,5 @@ class HomeViewController: UIViewController, MXChatListModelDelegate {
         present(alert, animated: true, completion: nil)
     }
 }
+
+

@@ -293,7 +293,7 @@
                         <viewLayoutGuide key="safeArea" id="DqF-wY-kBw"/>
                     </view>
                     <navigationItem key="navigationItem" title="ONCO-CHAT" id="juR-Rf-vLA">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="cMD-5m-BIS"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="cMD-5m-BIS"/>
                     </navigationItem>
                     <connections>
                         <outlet property="spinner" destination="gI2-LL-1BB" id="XOH-jD-26e"/>
@@ -308,7 +308,7 @@
         <!--Custom Chat View Controller-->
         <scene sceneID="Bda-OA-gw3">
             <objects>
-                <viewController id="D6v-w5-Oy8" customClass="CustomChatViewController" customModule="methodist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatVC" id="D6v-w5-Oy8" customClass="CustomChatViewController" customModule="methodist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fib-UB-wJ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

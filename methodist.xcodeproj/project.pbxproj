@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */; };
+		932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639D91F9DD69E002F7767 /* ChatSDK.framework */; };
 		933633021F94D85E00727A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933633011F94D85E00727A6F /* AppDelegate.swift */; };
 		933633071F94D85E00727A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933633051F94D85E00727A6F /* Main.storyboard */; };
 		933633091F94D85E00727A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933633081F94D85E00727A6F /* Assets.xcassets */; };
@@ -19,7 +21,6 @@
 		93587B291F9A0B8D0031B54C /* CustomChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93587B281F9A0B8D0031B54C /* CustomChatViewController.swift */; };
 		935FDBD91F972527002535D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FDBD81F972527002535D7 /* LoginViewController.swift */; };
 		935FDBDB1F972CF7002535D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FDBDA1F972CF7002535D7 /* HomeViewController.swift */; };
-		935FDBDC1F973D80002535D7 /* ChatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 933633331F95D0D200727A6F /* ChatSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		976157887B443F221FF4E502 /* Pods_methodist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447C6372812CD29EBEF15224 /* Pods_methodist.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B9E77CE8C0BFAEDCCEBC5086 /* Pods_methodistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0E6D7100371F61FED12174 /* Pods_methodistTests.framework */; };
 		ED9B41B95E6E470C3BA7D3CE /* Pods_methodistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */; };
@@ -48,6 +49,8 @@
 		447C6372812CD29EBEF15224 /* Pods_methodist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		703DDEAE127E1FDC9A70753E /* Pods-methodistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodistUITests/Pods-methodistUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatSDKResource.bundle; sourceTree = "<group>"; };
+		932639D91F9DD69E002F7767 /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChatSDK.framework; sourceTree = "<group>"; };
 		933632FE1F94D85E00727A6F /* methodist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = methodist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		933633011F94D85E00727A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		933633061F94D85E00727A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,8 +63,6 @@
 		9336331D1F94D85E00727A6F /* methodistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = methodistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		933633211F94D85E00727A6F /* methodistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodistUITests.swift; sourceTree = "<group>"; };
 		933633231F94D85E00727A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		933633331F95D0D200727A6F /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChatSDK.framework; sourceTree = "<group>"; };
-		933633341F95D0E400727A6F /* ChatSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatSDKResource.bundle; sourceTree = "<group>"; };
 		933633351F95D0FD00727A6F /* Moxtra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moxtra-Bridging-Header.h"; sourceTree = "<group>"; };
 		933633371F95D1DC00727A6F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		933633391F95D1F800727A6F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
@@ -81,10 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				935FDBDC1F973D80002535D7 /* ChatSDK.framework in Frameworks */,
 				933633381F95D1DC00727A6F /* libc++.tbd in Frameworks */,
 				9336333A1F95D1F800727A6F /* libxml2.tbd in Frameworks */,
 				9336333C1F95D20800727A6F /* libz.tbd in Frameworks */,
+				932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */,
 				976157887B443F221FF4E502 /* Pods_methodist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,8 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				933633351F95D0FD00727A6F /* Moxtra-Bridging-Header.h */,
-				933633341F95D0E400727A6F /* ChatSDKResource.bundle */,
-				933633331F95D0D200727A6F /* ChatSDK.framework */,
+				932639D91F9DD69E002F7767 /* ChatSDK.framework */,
+				932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */,
 			);
 			path = SDK;
 			sourceTree = "<group>";
@@ -330,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */,
 				9336330C1F94D85E00727A6F /* LaunchScreen.storyboard in Resources */,
 				933633091F94D85E00727A6F /* Assets.xcassets in Resources */,
 				933633071F94D85E00727A6F /* Main.storyboard in Resources */,
