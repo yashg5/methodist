@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */; };
 		932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639D91F9DD69E002F7767 /* ChatSDK.framework */; };
+		932639E11F9F19DE002F7767 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DE1F9F19DD002F7767 /* AWSCore.framework */; };
+		932639E21F9F19DE002F7767 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DF1F9F19DD002F7767 /* AWSAuthCore.framework */; };
+		932639E31F9F19DE002F7767 /* AWSLex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639E01F9F19DE002F7767 /* AWSLex.framework */; };
+		932639E61F9F19F2002F7767 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639E41F9F19F1002F7767 /* AWSConfiguration.swift */; };
+		932639EA1F9F1E15002F7767 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639E91F9F1E15002F7767 /* Bot.swift */; };
+		932639EB1F9F2A59002F7767 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DF1F9F19DD002F7767 /* AWSAuthCore.framework */; };
+		932639EC1F9F2A59002F7767 /* AWSAuthCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DF1F9F19DD002F7767 /* AWSAuthCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		932639ED1F9F2A59002F7767 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DE1F9F19DD002F7767 /* AWSCore.framework */; };
+		932639EE1F9F2A59002F7767 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 932639DE1F9F19DD002F7767 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		932639EF1F9F2A59002F7767 /* AWSLex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639E01F9F19DE002F7767 /* AWSLex.framework */; };
+		932639F01F9F2A59002F7767 /* AWSLex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 932639E01F9F19DE002F7767 /* AWSLex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		932639F31F9F4FF9002F7767 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639F21F9F4FF9002F7767 /* Network.swift */; };
+		932639F51FA05AC4002F7767 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 932639F41FA05AC4002F7767 /* awsconfiguration.json */; };
 		933633021F94D85E00727A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933633011F94D85E00727A6F /* AppDelegate.swift */; };
 		933633071F94D85E00727A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933633051F94D85E00727A6F /* Main.storyboard */; };
 		933633091F94D85E00727A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933633081F94D85E00727A6F /* Assets.xcassets */; };
@@ -43,6 +56,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		932639F11F9F2A59002F7767 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				932639F01F9F2A59002F7767 /* AWSLex.framework in Embed Frameworks */,
+				932639EC1F9F2A59002F7767 /* AWSAuthCore.framework in Embed Frameworks */,
+				932639EE1F9F2A59002F7767 /* AWSCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		10A4775A5DF1A593BDB14B12 /* Pods-methodistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodistTests/Pods-methodistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B0BDCE1C171676EC7DDD7ED /* Pods-methodist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodist/Pods-methodist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +80,13 @@
 		71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatSDKResource.bundle; sourceTree = "<group>"; };
 		932639D91F9DD69E002F7767 /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChatSDK.framework; sourceTree = "<group>"; };
+		932639DE1F9F19DD002F7767 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		932639DF1F9F19DD002F7767 /* AWSAuthCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = "<group>"; };
+		932639E01F9F19DE002F7767 /* AWSLex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSLex.framework; sourceTree = "<group>"; };
+		932639E41F9F19F1002F7767 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		932639E91F9F1E15002F7767 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		932639F21F9F4FF9002F7767 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		932639F41FA05AC4002F7767 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		933632FE1F94D85E00727A6F /* methodist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = methodist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		933633011F94D85E00727A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		933633061F94D85E00727A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,11 +118,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932639EB1F9F2A59002F7767 /* AWSAuthCore.framework in Frameworks */,
+				932639ED1F9F2A59002F7767 /* AWSCore.framework in Frameworks */,
+				932639E31F9F19DE002F7767 /* AWSLex.framework in Frameworks */,
+				932639E21F9F19DE002F7767 /* AWSAuthCore.framework in Frameworks */,
 				933633381F95D1DC00727A6F /* libc++.tbd in Frameworks */,
 				9336333A1F95D1F800727A6F /* libxml2.tbd in Frameworks */,
 				9336333C1F95D20800727A6F /* libz.tbd in Frameworks */,
 				932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */,
 				976157887B443F221FF4E502 /* Pods_methodist.framework in Frameworks */,
+				932639EF1F9F2A59002F7767 /* AWSLex.framework in Frameworks */,
+				932639E11F9F19DE002F7767 /* AWSCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +164,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		932639DD1F9F19C0002F7767 /* BOT_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				932639DF1F9F19DD002F7767 /* AWSAuthCore.framework */,
+				932639DE1F9F19DD002F7767 /* AWSCore.framework */,
+				932639E01F9F19DE002F7767 /* AWSLex.framework */,
+			);
+			path = BOT_SDK;
+			sourceTree = "<group>";
+		};
 		933632F51F94D85E00727A6F = {
 			isa = PBXGroup;
 			children = (
-				935FDBDE1F99E359002535D7 /* Models */,
+				932639DD1F9F19C0002F7767 /* BOT_SDK */,
 				933633321F95D06600727A6F /* SDK */,
 				933633001F94D85E00727A6F /* methodist */,
 				933633151F94D85E00727A6F /* methodistTests */,
@@ -149,6 +201,9 @@
 		933633001F94D85E00727A6F /* methodist */ = {
 			isa = PBXGroup;
 			children = (
+				932639E91F9F1E15002F7767 /* Bot.swift */,
+				932639F41FA05AC4002F7767 /* awsconfiguration.json */,
+				932639E41F9F19F1002F7767 /* AWSConfiguration.swift */,
 				933633011F94D85E00727A6F /* AppDelegate.swift */,
 				933633051F94D85E00727A6F /* Main.storyboard */,
 				933633081F94D85E00727A6F /* Assets.xcassets */,
@@ -157,6 +212,7 @@
 				935FDBD81F972527002535D7 /* LoginViewController.swift */,
 				935FDBDA1F972CF7002535D7 /* HomeViewController.swift */,
 				93587B281F9A0B8D0031B54C /* CustomChatViewController.swift */,
+				932639F21F9F4FF9002F7767 /* Network.swift */,
 			);
 			path = methodist;
 			sourceTree = "<group>";
@@ -203,13 +259,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		935FDBDE1F99E359002535D7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,6 +272,7 @@
 				933632FC1F94D85E00727A6F /* Resources */,
 				B4869FBD8B975EAA5C448AA9 /* [CP] Embed Pods Frameworks */,
 				F3B602B54A075BCC73675791 /* [CP] Copy Pods Resources */,
+				932639F11F9F2A59002F7767 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				932639F51FA05AC4002F7767 /* awsconfiguration.json in Resources */,
 				932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */,
 				9336330C1F94D85E00727A6F /* LaunchScreen.storyboard in Resources */,
 				933633091F94D85E00727A6F /* Assets.xcassets in Resources */,
@@ -513,7 +564,10 @@
 			files = (
 				935FDBD91F972527002535D7 /* LoginViewController.swift in Sources */,
 				933633021F94D85E00727A6F /* AppDelegate.swift in Sources */,
+				932639E61F9F19F2002F7767 /* AWSConfiguration.swift in Sources */,
+				932639EA1F9F1E15002F7767 /* Bot.swift in Sources */,
 				935FDBDB1F972CF7002535D7 /* HomeViewController.swift in Sources */,
+				932639F31F9F4FF9002F7767 /* Network.swift in Sources */,
 				93587B291F9A0B8D0031B54C /* CustomChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -686,6 +740,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/BOT_SDK",
 				);
 				INFOPLIST_FILE = methodist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -711,6 +766,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/BOT_SDK",
 				);
 				INFOPLIST_FILE = methodist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
