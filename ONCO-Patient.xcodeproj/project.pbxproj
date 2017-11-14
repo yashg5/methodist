@@ -1,0 +1,884 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60B1AE7B447BE846F0783640 /* Pods_ONCO_Patient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9BCBB660A5BB64630D7541 /* Pods_ONCO_Patient.framework */; };
+		6B6582CD033CC6631ADF5D05 /* Pods_ONCO_PatientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B9488BE6869E0B21170C20 /* Pods_ONCO_PatientTests.framework */; };
+		932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */; };
+		932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932639D91F9DD69E002F7767 /* ChatSDK.framework */; };
+		932639E61F9F19F2002F7767 /* AWSConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639E41F9F19F1002F7767 /* AWSConfiguration.swift */; };
+		932639EA1F9F1E15002F7767 /* Bot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639E91F9F1E15002F7767 /* Bot.swift */; };
+		932639F31F9F4FF9002F7767 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932639F21F9F4FF9002F7767 /* Network.swift */; };
+		933633021F94D85E00727A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933633011F94D85E00727A6F /* AppDelegate.swift */; };
+		933633071F94D85E00727A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 933633051F94D85E00727A6F /* Main.storyboard */; };
+		933633091F94D85E00727A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 933633081F94D85E00727A6F /* Assets.xcassets */; };
+		9336330C1F94D85E00727A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9336330A1F94D85E00727A6F /* LaunchScreen.storyboard */; };
+		933633171F94D85E00727A6F /* methodistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933633161F94D85E00727A6F /* methodistTests.swift */; };
+		933633221F94D85E00727A6F /* methodistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933633211F94D85E00727A6F /* methodistUITests.swift */; };
+		933633381F95D1DC00727A6F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 933633371F95D1DC00727A6F /* libc++.tbd */; };
+		9336333A1F95D1F800727A6F /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 933633391F95D1F800727A6F /* libxml2.tbd */; };
+		9336333C1F95D20800727A6F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9336333B1F95D20700727A6F /* libz.tbd */; };
+		93587B291F9A0B8D0031B54C /* CustomChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93587B281F9A0B8D0031B54C /* CustomChatViewController.swift */; };
+		935FDBD91F972527002535D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FDBD81F972527002535D7 /* LoginViewController.swift */; };
+		935FDBDB1F972CF7002535D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935FDBDA1F972CF7002535D7 /* HomeViewController.swift */; };
+		9375E32E1FA89CA500965959 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9375E32D1FA89CA500965959 /* awsconfiguration.json */; };
+		945DA87F377262AC57CF9FCD /* Pods_ONCO_PatientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBEBA15456C167C594FE6F2 /* Pods_ONCO_PatientUITests.framework */; };
+		B9E77CE8C0BFAEDCCEBC5086 /* Pods_methodistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0E6D7100371F61FED12174 /* Pods_methodistTests.framework */; };
+		ED9B41B95E6E470C3BA7D3CE /* Pods_methodistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		933633131F94D85E00727A6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 933632F61F94D85E00727A6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933632FD1F94D85E00727A6F;
+			remoteInfo = methodist;
+		};
+		9336331E1F94D85E00727A6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 933632F61F94D85E00727A6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933632FD1F94D85E00727A6F;
+			remoteInfo = methodist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10A4775A5DF1A593BDB14B12 /* Pods-methodistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodistTests/Pods-methodistTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B0BDCE1C171676EC7DDD7ED /* Pods-methodist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodist/Pods-methodist.debug.xcconfig"; sourceTree = "<group>"; };
+		447C6372812CD29EBEF15224 /* Pods_methodist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B83207255381C16194C8E1B /* Pods-ONCO-PatientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-PatientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-PatientUITests/Pods-ONCO-PatientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		703DDEAE127E1FDC9A70753E /* Pods-methodistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-methodistUITests/Pods-methodistUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80772F3D58008435A35EBC5A /* Pods-ONCO-Patient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-Patient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-Patient/Pods-ONCO-Patient.debug.xcconfig"; sourceTree = "<group>"; };
+		8EBEBA15456C167C594FE6F2 /* Pods_ONCO_PatientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONCO_PatientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChatSDKResource.bundle; sourceTree = "<group>"; };
+		932639D91F9DD69E002F7767 /* ChatSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ChatSDK.framework; sourceTree = "<group>"; };
+		932639E41F9F19F1002F7767 /* AWSConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSConfiguration.swift; sourceTree = "<group>"; };
+		932639E91F9F1E15002F7767 /* Bot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bot.swift; sourceTree = "<group>"; };
+		932639F21F9F4FF9002F7767 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		933632FE1F94D85E00727A6F /* ONCO-Patient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ONCO-Patient.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933633011F94D85E00727A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		933633061F94D85E00727A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		933633081F94D85E00727A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9336330B1F94D85E00727A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9336330D1F94D85E00727A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		933633121F94D85E00727A6F /* ONCO-PatientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ONCO-PatientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933633161F94D85E00727A6F /* methodistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodistTests.swift; sourceTree = "<group>"; };
+		933633181F94D85E00727A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9336331D1F94D85E00727A6F /* ONCO-PatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ONCO-PatientUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		933633211F94D85E00727A6F /* methodistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = methodistUITests.swift; sourceTree = "<group>"; };
+		933633231F94D85E00727A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		933633351F95D0FD00727A6F /* Moxtra-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moxtra-Bridging-Header.h"; sourceTree = "<group>"; };
+		933633371F95D1DC00727A6F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		933633391F95D1F800727A6F /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		9336333B1F95D20700727A6F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9336333D1F95D23300727A6F /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
+		93587B281F9A0B8D0031B54C /* CustomChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatViewController.swift; sourceTree = "<group>"; };
+		935FDBD81F972527002535D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		935FDBDA1F972CF7002535D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9375E32D1FA89CA500965959 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		9E0E6D7100371F61FED12174 /* Pods_methodistTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_methodistTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE889E245AE93F9A21263387 /* Pods-ONCO-PatientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-PatientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-PatientUITests/Pods-ONCO-PatientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BE9BCBB660A5BB64630D7541 /* Pods_ONCO_Patient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONCO_Patient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB44E10222AF158BB2D7EA5 /* Pods-ONCO-PatientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-PatientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-PatientTests/Pods-ONCO-PatientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4B9488BE6869E0B21170C20 /* Pods_ONCO_PatientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ONCO_PatientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FF6F5F44D661D3D5E8012D /* Pods-methodistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-methodistTests/Pods-methodistTests.release.xcconfig"; sourceTree = "<group>"; };
+		E14C301888E729C334CAB539 /* Pods-methodistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-methodistUITests/Pods-methodistUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E7AC69F0410E7AA09CEC8F58 /* Pods-methodist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-methodist.release.xcconfig"; path = "Pods/Target Support Files/Pods-methodist/Pods-methodist.release.xcconfig"; sourceTree = "<group>"; };
+		EF2C96D313B31B874509FBAF /* Pods-ONCO-PatientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-PatientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-PatientTests/Pods-ONCO-PatientTests.release.xcconfig"; sourceTree = "<group>"; };
+		F2143717C5D2E0464D35EF86 /* Pods-ONCO-Patient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ONCO-Patient.release.xcconfig"; path = "Pods/Target Support Files/Pods-ONCO-Patient/Pods-ONCO-Patient.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		933632FB1F94D85E00727A6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933633381F95D1DC00727A6F /* libc++.tbd in Frameworks */,
+				9336333A1F95D1F800727A6F /* libxml2.tbd in Frameworks */,
+				9336333C1F95D20800727A6F /* libz.tbd in Frameworks */,
+				932639DA1F9DD69E002F7767 /* ChatSDK.framework in Frameworks */,
+				60B1AE7B447BE846F0783640 /* Pods_ONCO_Patient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9336330F1F94D85E00727A6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E77CE8C0BFAEDCCEBC5086 /* Pods_methodistTests.framework in Frameworks */,
+				6B6582CD033CC6631ADF5D05 /* Pods_ONCO_PatientTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9336331A1F94D85E00727A6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9B41B95E6E470C3BA7D3CE /* Pods_methodistUITests.framework in Frameworks */,
+				945DA87F377262AC57CF9FCD /* Pods_ONCO_PatientUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43A1F3A91CF5642FED21ED9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B0BDCE1C171676EC7DDD7ED /* Pods-methodist.debug.xcconfig */,
+				E7AC69F0410E7AA09CEC8F58 /* Pods-methodist.release.xcconfig */,
+				10A4775A5DF1A593BDB14B12 /* Pods-methodistTests.debug.xcconfig */,
+				E0FF6F5F44D661D3D5E8012D /* Pods-methodistTests.release.xcconfig */,
+				703DDEAE127E1FDC9A70753E /* Pods-methodistUITests.debug.xcconfig */,
+				E14C301888E729C334CAB539 /* Pods-methodistUITests.release.xcconfig */,
+				80772F3D58008435A35EBC5A /* Pods-ONCO-Patient.debug.xcconfig */,
+				F2143717C5D2E0464D35EF86 /* Pods-ONCO-Patient.release.xcconfig */,
+				CAB44E10222AF158BB2D7EA5 /* Pods-ONCO-PatientTests.debug.xcconfig */,
+				EF2C96D313B31B874509FBAF /* Pods-ONCO-PatientTests.release.xcconfig */,
+				4B83207255381C16194C8E1B /* Pods-ONCO-PatientUITests.debug.xcconfig */,
+				BE889E245AE93F9A21263387 /* Pods-ONCO-PatientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		933632F51F94D85E00727A6F = {
+			isa = PBXGroup;
+			children = (
+				933633321F95D06600727A6F /* SDK */,
+				933633001F94D85E00727A6F /* ONCO-Patient */,
+				933633151F94D85E00727A6F /* ONCO-PatientTests */,
+				933633201F94D85E00727A6F /* ONCO-PatientUITests */,
+				933632FF1F94D85E00727A6F /* Products */,
+				933633361F95D1DC00727A6F /* Frameworks */,
+				43A1F3A91CF5642FED21ED9E /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		933632FF1F94D85E00727A6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				933632FE1F94D85E00727A6F /* ONCO-Patient.app */,
+				933633121F94D85E00727A6F /* ONCO-PatientTests.xctest */,
+				9336331D1F94D85E00727A6F /* ONCO-PatientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		933633001F94D85E00727A6F /* ONCO-Patient */ = {
+			isa = PBXGroup;
+			children = (
+				932639E91F9F1E15002F7767 /* Bot.swift */,
+				932639E41F9F19F1002F7767 /* AWSConfiguration.swift */,
+				933633011F94D85E00727A6F /* AppDelegate.swift */,
+				9375E32D1FA89CA500965959 /* awsconfiguration.json */,
+				933633051F94D85E00727A6F /* Main.storyboard */,
+				933633081F94D85E00727A6F /* Assets.xcassets */,
+				9336330A1F94D85E00727A6F /* LaunchScreen.storyboard */,
+				9336330D1F94D85E00727A6F /* Info.plist */,
+				935FDBD81F972527002535D7 /* LoginViewController.swift */,
+				935FDBDA1F972CF7002535D7 /* HomeViewController.swift */,
+				93587B281F9A0B8D0031B54C /* CustomChatViewController.swift */,
+				932639F21F9F4FF9002F7767 /* Network.swift */,
+			);
+			path = "ONCO-Patient";
+			sourceTree = "<group>";
+		};
+		933633151F94D85E00727A6F /* ONCO-PatientTests */ = {
+			isa = PBXGroup;
+			children = (
+				933633161F94D85E00727A6F /* methodistTests.swift */,
+				933633181F94D85E00727A6F /* Info.plist */,
+			);
+			path = "ONCO-PatientTests";
+			sourceTree = "<group>";
+		};
+		933633201F94D85E00727A6F /* ONCO-PatientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				933633211F94D85E00727A6F /* methodistUITests.swift */,
+				933633231F94D85E00727A6F /* Info.plist */,
+			);
+			path = "ONCO-PatientUITests";
+			sourceTree = "<group>";
+		};
+		933633321F95D06600727A6F /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				933633351F95D0FD00727A6F /* Moxtra-Bridging-Header.h */,
+				932639D91F9DD69E002F7767 /* ChatSDK.framework */,
+				932639D71F9DD67D002F7767 /* ChatSDKResource.bundle */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		933633361F95D1DC00727A6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9336333D1F95D23300727A6F /* CallKit.framework */,
+				9336333B1F95D20700727A6F /* libz.tbd */,
+				933633391F95D1F800727A6F /* libxml2.tbd */,
+				933633371F95D1DC00727A6F /* libc++.tbd */,
+				447C6372812CD29EBEF15224 /* Pods_methodist.framework */,
+				9E0E6D7100371F61FED12174 /* Pods_methodistTests.framework */,
+				71E566CE78D79CB1BDF07289 /* Pods_methodistUITests.framework */,
+				BE9BCBB660A5BB64630D7541 /* Pods_ONCO_Patient.framework */,
+				D4B9488BE6869E0B21170C20 /* Pods_ONCO_PatientTests.framework */,
+				8EBEBA15456C167C594FE6F2 /* Pods_ONCO_PatientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		933632FD1F94D85E00727A6F /* ONCO-Patient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933633261F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-Patient" */;
+			buildPhases = (
+				EDF08DF92C5EAE23CDEC1984 /* [CP] Check Pods Manifest.lock */,
+				933632FA1F94D85E00727A6F /* Sources */,
+				933632FB1F94D85E00727A6F /* Frameworks */,
+				933632FC1F94D85E00727A6F /* Resources */,
+				B4869FBD8B975EAA5C448AA9 /* [CP] Embed Pods Frameworks */,
+				F3B602B54A075BCC73675791 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ONCO-Patient";
+			productName = methodist;
+			productReference = 933632FE1F94D85E00727A6F /* ONCO-Patient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		933633111F94D85E00727A6F /* ONCO-PatientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 933633291F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-PatientTests" */;
+			buildPhases = (
+				AB77189F8FEFEE8351EF45FA /* [CP] Check Pods Manifest.lock */,
+				9336330E1F94D85E00727A6F /* Sources */,
+				9336330F1F94D85E00727A6F /* Frameworks */,
+				933633101F94D85E00727A6F /* Resources */,
+				77C69DDD9667C7621CACA474 /* [CP] Embed Pods Frameworks */,
+				A8217297A19CDAB842505442 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				933633141F94D85E00727A6F /* PBXTargetDependency */,
+			);
+			name = "ONCO-PatientTests";
+			productName = methodistTests;
+			productReference = 933633121F94D85E00727A6F /* ONCO-PatientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9336331C1F94D85E00727A6F /* ONCO-PatientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9336332C1F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-PatientUITests" */;
+			buildPhases = (
+				7E53DC5837982DA73E0EE873 /* [CP] Check Pods Manifest.lock */,
+				933633191F94D85E00727A6F /* Sources */,
+				9336331A1F94D85E00727A6F /* Frameworks */,
+				9336331B1F94D85E00727A6F /* Resources */,
+				EC80933DDAFAC5397EBF2149 /* [CP] Embed Pods Frameworks */,
+				4AAEE18E50532002C944097B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9336331F1F94D85E00727A6F /* PBXTargetDependency */,
+			);
+			name = "ONCO-PatientUITests";
+			productName = methodistUITests;
+			productReference = 9336331D1F94D85E00727A6F /* ONCO-PatientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		933632F61F94D85E00727A6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Zemoso Labs";
+				TargetAttributes = {
+					933632FD1F94D85E00727A6F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					933633111F94D85E00727A6F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 933632FD1F94D85E00727A6F;
+					};
+					9336331C1F94D85E00727A6F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 933632FD1F94D85E00727A6F;
+					};
+				};
+			};
+			buildConfigurationList = 933632F91F94D85E00727A6F /* Build configuration list for PBXProject "ONCO-Patient" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 933632F51F94D85E00727A6F;
+			productRefGroup = 933632FF1F94D85E00727A6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				933632FD1F94D85E00727A6F /* ONCO-Patient */,
+				933633111F94D85E00727A6F /* ONCO-PatientTests */,
+				9336331C1F94D85E00727A6F /* ONCO-PatientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		933632FC1F94D85E00727A6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9375E32E1FA89CA500965959 /* awsconfiguration.json in Resources */,
+				932639D81F9DD67D002F7767 /* ChatSDKResource.bundle in Resources */,
+				9336330C1F94D85E00727A6F /* LaunchScreen.storyboard in Resources */,
+				933633091F94D85E00727A6F /* Assets.xcassets in Resources */,
+				933633071F94D85E00727A6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933633101F94D85E00727A6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9336331B1F94D85E00727A6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AAEE18E50532002C944097B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-PatientUITests/Pods-ONCO-PatientUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77C69DDD9667C7621CACA474 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-PatientTests/Pods-ONCO-PatientTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E53DC5837982DA73E0EE873 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONCO-PatientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8217297A19CDAB842505442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-PatientTests/Pods-ONCO-PatientTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB77189F8FEFEE8351EF45FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONCO-PatientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4869FBD8B975EAA5C448AA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-Patient/Pods-ONCO-Patient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSLex/AWSLex.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSLex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-Patient/Pods-ONCO-Patient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC80933DDAFAC5397EBF2149 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-PatientUITests/Pods-ONCO-PatientUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF08DF92C5EAE23CDEC1984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ONCO-Patient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3B602B54A075BCC73675791 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ONCO-Patient/Pods-ONCO-Patient-resources.sh\"\necho \"Target architectures: $ARCHS\"\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\nFRAMEWORK_TMP_PATH=\"$FRAMEWORK_EXECUTABLE_PATH-tmp\"\n\n# remove simulator's archs if location is not simulator's directory\ncase \"${TARGET_BUILD_DIR}\" in\n*\"iphonesimulator\")\necho \"No need to remove archs\"\n;;\n*)\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"i386\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"i386\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"i386 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"x86_64\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"x86_64\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"x86_64 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\n;;\nesac\n\necho \"Completed for executable $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\ndone";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		933632FA1F94D85E00727A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				935FDBD91F972527002535D7 /* LoginViewController.swift in Sources */,
+				933633021F94D85E00727A6F /* AppDelegate.swift in Sources */,
+				932639E61F9F19F2002F7767 /* AWSConfiguration.swift in Sources */,
+				932639EA1F9F1E15002F7767 /* Bot.swift in Sources */,
+				935FDBDB1F972CF7002535D7 /* HomeViewController.swift in Sources */,
+				932639F31F9F4FF9002F7767 /* Network.swift in Sources */,
+				93587B291F9A0B8D0031B54C /* CustomChatViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9336330E1F94D85E00727A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933633171F94D85E00727A6F /* methodistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		933633191F94D85E00727A6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933633221F94D85E00727A6F /* methodistUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		933633141F94D85E00727A6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 933632FD1F94D85E00727A6F /* ONCO-Patient */;
+			targetProxy = 933633131F94D85E00727A6F /* PBXContainerItemProxy */;
+		};
+		9336331F1F94D85E00727A6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 933632FD1F94D85E00727A6F /* ONCO-Patient */;
+			targetProxy = 9336331E1F94D85E00727A6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		933633051F94D85E00727A6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				933633061F94D85E00727A6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9336330A1F94D85E00727A6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9336330B1F94D85E00727A6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		933633241F94D85E00727A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		933633251F94D85E00727A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		933633271F94D85E00727A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80772F3D58008435A35EBC5A /* Pods-ONCO-Patient.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RFCVT6ZZ6Y;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/BOT_SDK",
+				);
+				INFOPLIST_FILE = "ONCO-Patient/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.docsynk.ONCOchat-Patient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDK/Moxtra-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		933633281F94D85E00727A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2143717C5D2E0464D35EF86 /* Pods-ONCO-Patient.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RFCVT6ZZ6Y;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/BOT_SDK",
+				);
+				INFOPLIST_FILE = "ONCO-Patient/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.docsynk.ONCOchat-Patient";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SDK/Moxtra-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		9336332A1F94D85E00727A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB44E10222AF158BB2D7EA5 /* Pods-ONCO-PatientTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 825E9NRVFU;
+				INFOPLIST_FILE = methodistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docsynk.methodistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONCO-Patient.app/ONCO-Patient";
+			};
+			name = Debug;
+		};
+		9336332B1F94D85E00727A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF2C96D313B31B874509FBAF /* Pods-ONCO-PatientTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 825E9NRVFU;
+				INFOPLIST_FILE = methodistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docsynk.methodistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ONCO-Patient.app/ONCO-Patient";
+			};
+			name = Release;
+		};
+		9336332D1F94D85E00727A6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B83207255381C16194C8E1B /* Pods-ONCO-PatientUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 825E9NRVFU;
+				INFOPLIST_FILE = methodistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docsynk.methodistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = methodist;
+			};
+			name = Debug;
+		};
+		9336332E1F94D85E00727A6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE889E245AE93F9A21263387 /* Pods-ONCO-PatientUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 825E9NRVFU;
+				INFOPLIST_FILE = methodistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.docsynk.methodistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = methodist;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		933632F91F94D85E00727A6F /* Build configuration list for PBXProject "ONCO-Patient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933633241F94D85E00727A6F /* Debug */,
+				933633251F94D85E00727A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		933633261F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-Patient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				933633271F94D85E00727A6F /* Debug */,
+				933633281F94D85E00727A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		933633291F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-PatientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9336332A1F94D85E00727A6F /* Debug */,
+				9336332B1F94D85E00727A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9336332C1F94D85E00727A6F /* Build configuration list for PBXNativeTarget "ONCO-PatientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9336332D1F94D85E00727A6F /* Debug */,
+				9336332E1F94D85E00727A6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 933632F61F94D85E00727A6F /* Project object */;
+}
